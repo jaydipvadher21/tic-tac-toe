@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexagonal Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body class="theme-neon">
+    <div class="container">
+      <h1>Hexagonal Tic Tac Toe</h1>
+      <!-- Controls -->
+      <div class="controls">
+        <select id="themeSelect" aria-label="Select theme">
+          <option value="neon">Neon</option>
+          <option value="retro">Retro</option>
+          <option value="cosmic">Cosmic</option>
+        </select>
+        <select id="boardSize" aria-label="Select board size">
+          <option value="3">3x3</option>
+          <option value="4">4x4</option>
+        </select>
+        <select id="gameMode" aria-label="Select game mode">
+          <option value="twoPlayer">Two Player</option>
+          <option value="ai">Vs AI</option>
+        </select>
+        <button id="resetBtn" aria-label="Reset game">Reset</button>
+      </div>
+      <!-- Scoreboard -->
+      <div class="scoreboard">
+        <span>X: <span id="xScore">0</span></span>
+        <span>O: <span id="oScore">0</span></span>
+        <span>Draws: <span id="drawScore">0</span></span>
+      </div>
+      <!-- Message -->
+      <div id="message" class="message hidden"></div>
+      <!-- Game Board -->
+      <div id="gameBoard" class="game-board"></div>
+    </div>
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
